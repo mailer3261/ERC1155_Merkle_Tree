@@ -54,6 +54,7 @@ Testing script for this contract include the following steps:
 Try running some of the following in the terminal:
 
 ```shell
+npm install --save-dev hardhat
 npx hardhat compile
 npx hardhat test
 npx hardhat run scripts/deploy.js
