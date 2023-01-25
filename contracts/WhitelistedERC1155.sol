@@ -6,10 +6,10 @@ import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
 contract WhitelistedERC1155 is ERC1155 {
     bytes32 public merkleRoot =
-        0x74f4666169faccda89a45d47ab1997a62f24c3cd534a01539db8f0e40d3eb8b1;
-    address private admin;
+        0x43f7ff8ee7c4c51e1adf6dd9f5b6a65c46f98d405941bc20a2efddaf1f1fa290;
+    address public admin;
 
-    constructor() ERC1155("") {
+    constructor() ERC1155("www.google.com") {
         admin = msg.sender;
     }
 
