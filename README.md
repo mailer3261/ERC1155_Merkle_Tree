@@ -21,6 +21,7 @@ It uses the Chai library to make assertions and the hardhat environment for test
 Testing script for this contract include the following steps:
 
 1)Deploy the contract and Verify that the contract has the expected initial state (e.g. that the admin variable is set to the deploying address)
+
 2)Test the mint() function by:
       - Providing a valid Merkle proof and confirming that the function call succeeds and the token is minted to the correct address
       - Providing an invalid Merkle proof and confirming that the function call reverts with the expected error message
