@@ -1,6 +1,6 @@
 const { expect } = require("chai");
 
-// const {ethers} = require("hardhat")
+const {ethers} = require("hardhat")
 describe("WhitelistedERC1155", function () {
   let whitelistedERC1155;
   let admin;
