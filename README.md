@@ -1,6 +1,6 @@
 # ERC1155_Merkle_Tree (ERC1155 contract, with tests for that contract, and a script that deploys that contract.)
 
-whitelisting for Tokens can be implemented in various ways such as,
+Whitelisting for Tokens can be implemented in various ways such as,
 
 1. Array of whitelisted addresses
 2. Mapping of Addresses and Boolean
