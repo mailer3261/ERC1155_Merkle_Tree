@@ -9,7 +9,7 @@ contract WhitelistedERC1155 is ERC1155 {
         0x74f4666169faccda89a45d47ab1997a62f24c3cd534a01539db8f0e40d3eb8b1;
     address private admin;
 
-    constructor() ERC1155("www.google.com") {
+    constructor() ERC1155("") {
         admin = msg.sender;
     }
 
@@ -22,7 +22,7 @@ contract WhitelistedERC1155 is ERC1155 {
 
         require(
             MerkleProof.verify(merkleProof, merkleRoot, leaf),
-            "Invalid Merkle Proof, User is not on the whitelist."
+            "Invalid Merkle Proof."
         );
         _mint(msg.sender, id, amount, "");
     }
@@ -37,6 +37,10 @@ contract WhitelistedERC1155 is ERC1155 {
 
     function setURI(string memory newuri) public onlyAdmin {
         _setURI(newuri);
+    }
+
+    function setAdmin(address newAdmin) public onlyAdmin {
+        admin = newAdmin;
     }
 
     modifier onlyAdmin() {
